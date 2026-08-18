@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Caioba Games</title>
+  <title>Início - Sala de Aula</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.gstatic.com/classroom/ic_product_classroom_32.png?v=2">
+  <link rel="shortcut icon" type="image/png" href="https://www.gstatic.com/classroom/ic_product_classroom_32.png?v=2">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -136,8 +139,9 @@
     }
 
     .game-card {
-      display: block;
-      height: 100%;
+      display: flex;
+      flex-direction: column;
+      height: 340px;
       overflow: hidden;
       color: var(--foreground);
       text-decoration: none;
@@ -188,7 +192,8 @@
     .game-cover {
       position: relative;
       width: 100%;
-      aspect-ratio: 1 / 1;
+      height: 180px;
+      flex: 0 0 180px;
       overflow: hidden;
       background: #0a0a0f;
     }
@@ -218,6 +223,10 @@
 
     .game-info {
       padding: 16px;
+      flex: 1;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
     }
 
     .game-name {
@@ -240,6 +249,7 @@
     .game-description {
       min-height: 38px;
       margin: 0;
+      flex: 1;
       color: var(--muted);
       font-size: 12px;
       line-height: 1.6;
@@ -591,9 +601,10 @@
         rel="noopener noreferrer"
       >
         <div class="game-cover">
-          <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:var(--muted);font-family:'Orbitron',sans-serif;font-size:11px;text-align:center;padding:20px;">
-            SNOW RIDER
-          </div>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZnTQARWPLkZwQ_ctZEkMvvtR03H7uXfTil20R0LzZIg&s=10"
+            alt="Snow Rider"
+          />
         </div>
 
         <div class="game-info">
@@ -674,21 +685,19 @@
 
       <a
         class="game-card"
-        href="https://html5.gamedistribution.com/940b8ad7c3784a00be88bedaf0eae0af/?gd_sdk_referrer_url=https://gamedistribution.com/games/blocks-and-that%27s-it/"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="https://cloud.onlinegames.io/games/2026/galatrix/marble-run/game.html"
       >
         <div class="game-cover">
           <img
-            src="https://html5.gamedistribution.com/940b8ad7c3784a00be88bedaf0eae0af-512x384.jpg"
-            alt="Blocks and That's It"
+            src="https://www.onlinegames.io/media/posts/1354/responsive/marble-run-xs.webp"
+            alt="Marble Run"
           />
         </div>
 
         <div class="game-info">
-          <h2 class="game-name">BLOCKS AND THAT'S IT</h2>
+          <h2 class="game-name">MARBLE RUN</h2>
           <p class="game-description">
-            Puzzle no estilo Tetris: encaixe os blocos, limpe linhas e faça combos!
+            Jogue Marble Run diretamente no navegador.
           </p>
           <div class="play-button">JOGAR</div>
         </div>
@@ -696,21 +705,19 @@
 
       <a
         class="game-card"
-        href="https://html5.gamedistribution.com/ec5a0aa39f5c4cd19d1e6153de22650d/?gd_sdk_referrer_url=https://gamedistribution.com/games/only-up/"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="https://www.onlinegames.io/games/2021/unity/stack-fire-ball/index.html"
       >
         <div class="game-cover">
           <img
-            src="https://html5.gamedistribution.com/ec5a0aa39f5c4cd19d1e6153de22650d-512x384.jpg"
-            alt="Only Up"
+            src="https://www.onlinegames.io/media/posts/184/responsive/Stack-Fire-Ball-Game-xs.jpg"
+            alt="Stack Fire Ball"
           />
         </div>
 
         <div class="game-info">
-          <h2 class="game-name">ONLY UP</h2>
+          <h2 class="game-name">STACK FIRE BALL</h2>
           <p class="game-description">
-            Suba cada vez mais alto sem checkpoints e tente chegar ao topo!
+            Jogue Stack Fire Ball diretamente no navegador.
           </p>
           <div class="play-button">JOGAR</div>
         </div>
@@ -718,21 +725,19 @@
 
       <a
         class="game-card"
-        href="https://html5.gamedistribution.com/ffea96f2185746d395668e20b18cf2ea/?gd_sdk_referrer_url=https://gamedistribution.com/games/only-up-parkour/"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="https://cloud.onlinegames.io/games/2024/unity3/stickman-gta-city/index-og.html"
       >
         <div class="game-cover">
           <img
-            src="https://html5.gamedistribution.com/ffea96f2185746d395668e20b18cf2ea-512x384.jpg"
-            alt="Only Up Parkour"
+            src="https://www.onlinegames.io/media/posts/900/responsive/stickman-gta-city-free-xs.jpg"
+            alt="Stickman GTA City"
           />
         </div>
 
         <div class="game-info">
-          <h2 class="game-name">ONLY UP PARKOUR</h2>
+          <h2 class="game-name">STICKMAN GTA CITY</h2>
           <p class="game-description">
-            Supere obstáculos, pule plataformas e tente conquistar grandes alturas.
+            Jogue Stickman GTA City diretamente no navegador.
           </p>
           <div class="play-button">JOGAR</div>
         </div>
@@ -740,21 +745,19 @@
 
       <a
         class="game-card"
-        href="https://html5.gamedistribution.com/48a82403f7b14a6b8a1ffb4f9f20dae9/?gd_sdk_referrer_url=https://gamedistribution.com/games/only-up-parkour-2/"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="https://cloud.onlinegames.io/games/2023/unity2/real-flight-simulator/index.html"
       >
         <div class="game-cover">
           <img
-            src="https://html5.gamedistribution.com/48a82403f7b14a6b8a1ffb4f9f20dae9-512x384.jpg"
-            alt="Only Up Parkour 2"
+            src="https://www.onlinegames.io/media/posts/342/responsive/Real-Flight-Simulator-2-xs.jpg"
+            alt="Real Flight Simulator"
           />
         </div>
 
         <div class="game-info">
-          <h2 class="game-name">ONLY UP PARKOUR 2</h2>
+          <h2 class="game-name">REAL FLIGHT SIMULATOR</h2>
           <p class="game-description">
-            Enfrente uma nova sequência de obstáculos e suba o mais alto que conseguir.
+            Jogue Real Flight Simulator diretamente no navegador.
           </p>
           <div class="play-button">JOGAR</div>
         </div>
@@ -762,21 +765,19 @@
 
       <a
         class="game-card"
-        href="https://html5.gamedistribution.com/7cd909d7d03e47c18e71d49e329b219d/?gd_sdk_referrer_url=https://gamedistribution.com/games/tobinin/"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="https://www.onlinegames.io/games/2024/unity/drift-king/index.html"
       >
         <div class="game-cover">
           <img
-            src="https://html5.gamedistribution.com/7cd909d7d03e47c18e71d49e329b219d-512x384.jpg"
-            alt="Tobinin"
+            src="https://www.onlinegames.io/media/posts/729/responsive/Drift-King-xs.jpg"
+            alt="Drift King"
           />
         </div>
 
         <div class="game-info">
-          <h2 class="game-name">TOBININ</h2>
+          <h2 class="game-name">DRIFT KING</h2>
           <p class="game-description">
-            Plataforma e puzzle em um mundo que muda conforme você joga.
+            Jogue Drift King diretamente no navegador.
           </p>
           <div class="play-button">JOGAR</div>
         </div>
@@ -784,21 +785,19 @@
 
       <a
         class="game-card"
-        href="https://html5.gamedistribution.com/902ee2d7bef446d79fde28bb28cd0f01/?gd_sdk_referrer_url=https://gamedistribution.com/games/frogtastic/"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="https://www.onlinegames.io/games/2023/unity2/cs-online/index.html"
       >
         <div class="game-cover">
           <img
-            src="https://html5.gamedistribution.com/902ee2d7bef446d79fde28bb28cd0f01-512x384.jpg"
-            alt="Frogtastic"
+            src="https://www.onlinegames.io/media/posts/434/responsive/CS-Online-xs.jpg"
+            alt="CS Online"
           />
         </div>
 
         <div class="game-info">
-          <h2 class="game-name">FROGTASTIC</h2>
+          <h2 class="game-name">CS ONLINE</h2>
           <p class="game-description">
-            Combine as bolas, faça combos e impeça que elas cheguem ao final.
+            Jogue CS Online diretamente no navegador.
           </p>
           <div class="play-button">JOGAR</div>
         </div>
@@ -806,21 +805,560 @@
 
       <a
         class="game-card"
-        href="https://html5.gamedistribution.com/e5555123e7e44eda8d076b30b7d4228f/?gd_sdk_referrer_url=https://gamedistribution.com/games/free-kick/"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="https://cloud.onlinegames.io/games/2025/unity4/dublix/game-og.html"
       >
         <div class="game-cover">
           <img
-            src="https://html5.gamedistribution.com/e5555123e7e44eda8d076b30b7d4228f-512x384.jpeg"
-            alt="Free Kick"
+            src="https://www.onlinegames.io/media/posts/1126/responsive/dublix-xs.webp"
+            alt="Dublix"
           />
         </div>
 
         <div class="game-info">
-          <h2 class="game-name">FREE KICK</h2>
+          <h2 class="game-name">DUBLIX</h2>
           <p class="game-description">
-            Tente marcar o maior número de gols e desbloqueie novas bolas e skins.
+            Jogue Dublix diretamente no navegador.
+          </p>
+          <div class="play-button">JOGAR</div>
+        </div>
+      </a>
+
+      <a
+        class="game-card"
+        href="https://cloud.onlinegames.io/games/2026/more/snaker-io/game.html"
+      >
+        <div class="game-cover">
+          <img
+            src="https://www.onlinegames.io/media/posts/1261/responsive/snaker-io-xs.webp"
+            alt="Snaker io"
+          />
+        </div>
+
+        <div class="game-info">
+          <h2 class="game-name">SNAKER IO</h2>
+          <p class="game-description">
+            Jogue Snaker io diretamente no navegador.
+          </p>
+          <div class="play-button">JOGAR</div>
+        </div>
+      </a>
+
+      <a
+        class="game-card"
+        href="https://cloud.onlinegames.io/games/2025/html/cube-worlds/index-og.html"
+      >
+        <div class="game-cover">
+          <img
+            src="https://www.onlinegames.io/media/posts/986/responsive/Cube-Worlds-xs.jpg"
+            alt="Cube Worlds"
+          />
+        </div>
+
+        <div class="game-info">
+          <h2 class="game-name">CUBE WORLDS</h2>
+          <p class="game-description">
+            Jogue Cube Worlds diretamente no navegador.
+          </p>
+          <div class="play-button">JOGAR</div>
+        </div>
+      </a>
+
+      <a
+        class="game-card"
+        href="https://cloud.onlinegames.io/games/2025/unity4/cubecraft-survival/index-og.html"
+      >
+        <div class="game-cover">
+          <img
+            src="https://www.onlinegames.io/media/posts/1113/responsive/cubecraft-survival-xs.webp"
+            alt="CubeCraft Survival"
+          />
+        </div>
+
+        <div class="game-info">
+          <h2 class="game-name">CUBECRAFT SURVIVAL</h2>
+          <p class="game-description">
+            Jogue CubeCraft Survival diretamente no navegador.
+          </p>
+          <div class="play-button">JOGAR</div>
+        </div>
+      </a>
+
+      <a
+        class="game-card"
+        href="https://www.onlinegames.io/games/2023/unity/drift-hunters-pro/index.html"
+      >
+        <div class="game-cover">
+          <img
+            src="https://www.onlinegames.io/media/posts/397/responsive/Drift-Hunters-Pro-xs.jpg"
+            alt="Drift Hunters Pro"
+          />
+        </div>
+
+        <div class="game-info">
+          <h2 class="game-name">DRIFT HUNTERS PRO</h2>
+          <p class="game-description">
+            Jogue Drift Hunters Pro diretamente no navegador.
+          </p>
+          <div class="play-button">JOGAR</div>
+        </div>
+      </a>
+
+      <a
+        class="game-card"
+        href="https://www.onlinegames.io/games/2022/unity/edys-car-simulator/index.html"
+      >
+        <div class="game-cover">
+          <img
+            src="https://www.onlinegames.io/media/posts/238/responsive/Edys-Car-Simulator-Online-xs.jpg"
+            alt="Edys Car Simulator"
+          />
+        </div>
+
+        <div class="game-info">
+          <h2 class="game-name">EDYS CAR SIMULATOR</h2>
+          <p class="game-description">
+            Jogue Edys Car Simulator diretamente no navegador.
+          </p>
+          <div class="play-button">JOGAR</div>
+        </div>
+      </a>
+
+      <a
+        class="game-card"
+        href="https://www.onlinegames.io/games/2023/unity/madalin-stunt-cars-pro/index.html"
+      >
+        <div class="game-cover">
+          <img
+            src="https://www.onlinegames.io/media/posts/401/responsive/Madalin-Stunt-Cars-Pro-Game-xs.jpg"
+            alt="Madalin Stunt Cars Pro"
+          />
+        </div>
+
+        <div class="game-info">
+          <h2 class="game-name">MADALIN STUNT CARS PRO</h2>
+          <p class="game-description">
+            Jogue Madalin Stunt Cars Pro diretamente no navegador.
+          </p>
+          <div class="play-button">JOGAR</div>
+        </div>
+      </a>
+
+      <a
+        class="game-card"
+        href="https://cloud.onlinegames.io/games/2025/unity/checkout-frenzy/index-og.html"
+      >
+        <div class="game-cover">
+          <img
+            src="https://www.onlinegames.io/media/posts/974/responsive/checkout-frenzy-cashier-game-xs.jpg"
+            alt="Checkout Frenzy"
+          />
+        </div>
+
+        <div class="game-info">
+          <h2 class="game-name">CHECKOUT FRENZY</h2>
+          <p class="game-description">
+            Jogue Checkout Frenzy diretamente no navegador.
+          </p>
+          <div class="play-button">JOGAR</div>
+        </div>
+      </a>
+
+      <a
+        class="game-card"
+        href="https://cloud.onlinegames.io/games/2024/unity3/warstrike/index-og.html"
+      >
+        <div class="game-cover">
+          <img
+            src="https://www.onlinegames.io/media/posts/870/responsive/WarStrike-Online-xs.jpg"
+            alt="WarStrike"
+          />
+        </div>
+
+        <div class="game-info">
+          <h2 class="game-name">WARSTRIKE</h2>
+          <p class="game-description">
+            Jogue WarStrike diretamente no navegador.
+          </p>
+          <div class="play-button">JOGAR</div>
+        </div>
+      </a>
+
+      <a
+        class="game-card"
+        href="https://www.onlinegames.io/games/2024/code/2/drunken-duel/index.html"
+      >
+        <div class="game-cover">
+          <img
+            src="https://www.onlinegames.io/media/posts/698/responsive/Drunken-Duel-xs.jpg"
+            alt="Drunken Duel"
+          />
+        </div>
+
+        <div class="game-info">
+          <h2 class="game-name">DRUNKEN DUEL</h2>
+          <p class="game-description">
+            Jogue Drunken Duel diretamente no navegador.
+          </p>
+          <div class="play-button">JOGAR</div>
+        </div>
+      </a>
+
+      <a
+        class="game-card"
+        href="https://www.onlinegames.io/games/2022/unity4/solitaire-adventure/index.html"
+      >
+        <div class="game-cover">
+          <img
+            src="https://www.onlinegames.io/media/posts/519/responsive/Solitaire-Adventure-Tripeaks-xs.jpg"
+            alt="Solitaire Adventure"
+          />
+        </div>
+
+        <div class="game-info">
+          <h2 class="game-name">SOLITAIRE ADVENTURE</h2>
+          <p class="game-description">
+            Jogue Solitaire Adventure diretamente no navegador.
+          </p>
+          <div class="play-button">JOGAR</div>
+        </div>
+      </a>
+
+      <a
+        class="game-card"
+        href="https://www.onlinegames.io/games/2023/unity2/guerrillas-io/index.html"
+      >
+        <div class="game-cover">
+          <img
+            src="https://www.onlinegames.io/media/posts/423/responsive/Guerillas-io-xs.jpg"
+            alt="Guerrillas io"
+          />
+        </div>
+
+        <div class="game-info">
+          <h2 class="game-name">GUERRILLAS IO</h2>
+          <p class="game-description">
+            Jogue Guerrillas io diretamente no navegador.
+          </p>
+          <div class="play-button">JOGAR</div>
+        </div>
+      </a>
+
+      <a
+        class="game-card"
+        href="https://www.onlinegames.io/games/2021/unity2/wasteland-shooters/index.html"
+      >
+        <div class="game-cover">
+          <img
+            src="https://www.onlinegames.io/media/posts/218/responsive/Wasteland-Shooters-xs.jpg"
+            alt="Wasteland Shooters"
+          />
+        </div>
+
+        <div class="game-info">
+          <h2 class="game-name">WASTELAND SHOOTERS</h2>
+          <p class="game-description">
+            Jogue Wasteland Shooters diretamente no navegador.
+          </p>
+          <div class="play-button">JOGAR</div>
+        </div>
+      </a>
+
+      <a
+        class="game-card"
+        href="https://www.onlinegames.io/games/2023/unity/crazy-strike-force/index.html"
+      >
+        <div class="game-cover">
+          <img
+            src="https://www.onlinegames.io/media/posts/366/responsive/Crazy-Strike-Force-xs.jpg"
+            alt="Crazy Strike Force"
+          />
+        </div>
+
+        <div class="game-info">
+          <h2 class="game-name">CRAZY STRIKE FORCE</h2>
+          <p class="game-description">
+            Jogue Crazy Strike Force diretamente no navegador.
+          </p>
+          <div class="play-button">JOGAR</div>
+        </div>
+      </a>
+
+      <a
+        class="game-card"
+        href="https://cloud.onlinegames.io/games/2024/unity2/fps-strike/index-og.html"
+      >
+        <div class="game-cover">
+          <img
+            src="https://www.onlinegames.io/media/posts/902/responsive/fps-strike-online-xs.jpg"
+            alt="FPS Strike"
+          />
+        </div>
+
+        <div class="game-info">
+          <h2 class="game-name">FPS STRIKE</h2>
+          <p class="game-description">
+            Jogue FPS Strike diretamente no navegador.
+          </p>
+          <div class="play-button">JOGAR</div>
+        </div>
+      </a>
+
+      <a
+        class="game-card"
+        href="https://www.onlinegames.io/games/2021/unity3/stickman-destruction/index.html"
+      >
+        <div class="game-cover">
+          <img
+            src="https://www.onlinegames.io/media/posts/233/responsive/Stickman-Destruction-xs.jpg"
+            alt="Stickman Destruction"
+          />
+        </div>
+
+        <div class="game-info">
+          <h2 class="game-name">STICKMAN DESTRUCTION</h2>
+          <p class="game-description">
+            Jogue Stickman Destruction diretamente no navegador.
+          </p>
+          <div class="play-button">JOGAR</div>
+        </div>
+      </a>
+
+      <a
+        class="game-card"
+        href="https://cloud.onlinegames.io/games/2024/unity/burnout-city/index-og.html"
+      >
+        <div class="game-cover">
+          <img
+            src="https://www.onlinegames.io/media/posts/861/responsive/burnoutcity-xs.jpg"
+            alt="Burnout City"
+          />
+        </div>
+
+        <div class="game-info">
+          <h2 class="game-name">BURNOUT CITY</h2>
+          <p class="game-description">
+            Jogue Burnout City diretamente no navegador.
+          </p>
+          <div class="play-button">JOGAR</div>
+        </div>
+      </a>
+
+      <a
+        class="game-card"
+        href="https://www.onlinegames.io/games/2023/construct/198/car-football/index.html"
+      >
+        <div class="game-cover">
+          <img
+            src="https://www.onlinegames.io/media/posts/405/responsive/Car-Football-xs.jpg"
+            alt="Car Football"
+          />
+        </div>
+
+        <div class="game-info">
+          <h2 class="game-name">CAR FOOTBALL</h2>
+          <p class="game-description">
+            Jogue Car Football diretamente no navegador.
+          </p>
+          <div class="play-button">JOGAR</div>
+        </div>
+      </a>
+
+      <a
+        class="game-card"
+        href="https://www.onlinegames.io/games/2021/unity3/armedforces-io/index.html"
+      >
+        <div class="game-cover">
+          <img
+            src="https://www.onlinegames.io/media/posts/234/responsive/Armed-Forces-io-xs.jpg"
+            alt="ArmedForces.io"
+          />
+        </div>
+
+        <div class="game-info">
+          <h2 class="game-name">ARMEDFORCES.IO</h2>
+          <p class="game-description">
+            Jogue ArmedForces.io diretamente no navegador.
+          </p>
+          <div class="play-button">JOGAR</div>
+        </div>
+      </a>
+
+      <a
+        class="game-card"
+        href="https://www.onlinegames.io/games/2021/unity3/legendary-sniper/index.html"
+      >
+        <div class="game-cover">
+          <img
+            src="https://www.onlinegames.io/media/posts/596/responsive/Legendary-Sniper-xs.jpg"
+            alt="Legendary Sniper"
+          />
+        </div>
+
+        <div class="game-info">
+          <h2 class="game-name">LEGENDARY SNIPER</h2>
+          <p class="game-description">
+            Jogue Legendary Sniper diretamente no navegador.
+          </p>
+          <div class="play-button">JOGAR</div>
+        </div>
+      </a>
+
+      <a
+        class="game-card"
+        href="https://cloud.onlinegames.io/games/2021/unity/motorbike-stunt-simulator/index-og.html"
+      >
+        <div class="game-cover">
+          <img
+            src="https://www.onlinegames.io/media/posts/1045/responsive/motorbike_stunt_simulator_game-2-xs.webp"
+            alt="Motorbike Stunt Simulator"
+          />
+        </div>
+
+        <div class="game-info">
+          <h2 class="game-name">MOTORBIKE STUNT SIMULATOR</h2>
+          <p class="game-description">
+            Jogue Motorbike Stunt Simulator diretamente no navegador.
+          </p>
+          <div class="play-button">JOGAR</div>
+        </div>
+      </a>
+
+      <a
+        class="game-card"
+        href="https://www.onlinegames.io/games/2021/3/police-chase-drifter/index.html"
+      >
+        <div class="game-cover">
+          <img
+            src="https://www.onlinegames.io/media/posts/155/responsive/Police-Chase-Drifter-Online-xs.jpg"
+            alt="Police Chase Drifter"
+          />
+        </div>
+
+        <div class="game-info">
+          <h2 class="game-name">POLICE CHASE DRIFTER</h2>
+          <p class="game-description">
+            Jogue Police Chase Drifter diretamente no navegador.
+          </p>
+          <div class="play-button">JOGAR</div>
+        </div>
+      </a>
+
+      <a
+        class="game-card"
+        href="https://www.onlinegames.io/games/2024/unity/highway-racer-pro/index.html"
+      >
+        <div class="game-cover">
+          <img
+            src="https://www.onlinegames.io/media/posts/822/responsive/Highway-Racer-Pro-xs.jpg"
+            alt="Highway Racer Pro"
+          />
+        </div>
+
+        <div class="game-info">
+          <h2 class="game-name">HIGHWAY RACER PRO</h2>
+          <p class="game-description">
+            Jogue Highway Racer Pro diretamente no navegador.
+          </p>
+          <div class="play-button">JOGAR</div>
+        </div>
+      </a>
+
+      <a
+        class="game-card"
+        href="https://www.onlinegames.io/games/2021/unity3/mob-city/index.html"
+      >
+        <div class="game-cover">
+          <img
+            src="https://www.onlinegames.io/media/posts/418/responsive/Mob-City-xs.jpg"
+            alt="Mob City"
+          />
+        </div>
+
+        <div class="game-info">
+          <h2 class="game-name">MOB CITY</h2>
+          <p class="game-description">
+            Jogue Mob City diretamente no navegador.
+          </p>
+          <div class="play-button">JOGAR</div>
+        </div>
+      </a>
+
+      <a
+        class="game-card"
+        href="https://www.onlinegames.io/games/2023/construct/235/trains-io/index.html"
+      >
+        <div class="game-cover">
+          <img
+            src="https://www.onlinegames.io/media/posts/470/responsive/Trains-io-Game-xs.jpg"
+            alt="Trains io"
+          />
+        </div>
+
+        <div class="game-info">
+          <h2 class="game-name">TRAINS IO</h2>
+          <p class="game-description">
+            Jogue Trains io diretamente no navegador.
+          </p>
+          <div class="play-button">JOGAR</div>
+        </div>
+      </a>
+
+      <a
+        class="game-card"
+        href="https://www.onlinegames.io/games/2022/unity3/fort-drifter/index.html"
+      >
+        <div class="game-cover">
+          <img
+            src="https://www.onlinegames.io/media/posts/592/responsive/Fort-Drifter-xs.jpg"
+            alt="Fort Drifter"
+          />
+        </div>
+
+        <div class="game-info">
+          <h2 class="game-name">FORT DRIFTER</h2>
+          <p class="game-description">
+            Jogue Fort Drifter diretamente no navegador.
+          </p>
+          <div class="play-button">JOGAR</div>
+        </div>
+      </a>
+
+
+      <a
+        class="game-card"
+        href="https://www.onlinegames.io/games/2022/unity3/basketball-io/index.html"
+      >
+        <div class="game-cover">
+          <img
+            src="https://cdn-bgp.bluestacks.com/BGP/us/gametiles_com.miniclip.basketballstars.jpg"
+            alt="Basketball IO"
+          />
+        </div>
+
+        <div class="game-info">
+          <h2 class="game-name">BASKETBALL IO</h2>
+          <p class="game-description">
+            Jogue Basketball IO diretamente no navegador.
+          </p>
+          <div class="play-button">JOGAR</div>
+        </div>
+      </a>
+
+      <a
+        class="game-card"
+        href="https://gamedistribution.com"
+      >
+        <div class="game-cover">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFIyD5Xl-ok8OYwQBqVZp2V5MlM8miUKXoDXdjTgZQOw&amp;s=10"
+            alt="Paper.Io"
+          />
+        </div>
+
+        <div class="game-info">
+          <h2 class="game-name">PAPER.IO</h2>
+          <p class="game-description">
+            Jogue Paper.Io diretamente no navegador.
           </p>
           <div class="play-button">JOGAR</div>
         </div>
@@ -881,6 +1419,12 @@
     let currentGameUrl = "";
     let currentGameTitle = "Jogo";
 
+    document.querySelectorAll(".game-card").forEach((card) => {
+      card.addEventListener("click", (event) => {
+        openGame(event, card.href);
+      });
+    });
+
     function openGame(event, url) {
       event.preventDefault();
       currentGameUrl = url;
@@ -929,13 +1473,28 @@
     fullscreenGameButton.addEventListener("click", async () => {
       try {
         if (!document.fullscreenElement) {
-          await gameFrameWrap.requestFullscreen();
-        } else {
+          const target = gameFrameWrap || gameFrame;
+
+          if (target.requestFullscreen) {
+            await target.requestFullscreen();
+          } else if (target.webkitRequestFullscreen) {
+            target.webkitRequestFullscreen();
+          }
+        } else if (document.exitFullscreen) {
           await document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
         }
       } catch (error) {
         console.warn("Tela cheia não disponível:", error);
       }
+    });
+
+    document.addEventListener("fullscreenchange", () => {
+      fullscreenGameButton.textContent =
+        document.fullscreenElement
+          ? "⛶ Sair da tela cheia"
+          : "⛶ Tela cheia";
     });
 
     closeGameButton.addEventListener("click", () => closeGame());
