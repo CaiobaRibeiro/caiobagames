@@ -1452,39 +1452,63 @@ document.addEventListener(
 
         /* TELA CHEIA */
 
-        fullscreenButton.addEventListener(
-            "click",
+    /* =========================
+   TELA CHEIA
+========================= */
 
-            async function() {
+fullscreenButton.addEventListener(
+    "click",
+    async function () {
 
-                try {
+        try {
 
-                    if(!document.fullscreenElement) {
+            // Se já estiver em tela cheia, sair
+            if (document.fullscreenElement) {
 
-                        await overlay.requestFullscreen();
-
-                    }
-
-                    else {
-
-                        await document.exitFullscreen();
-
-                    }
-
-                }
-
-                catch(error) {
-
-                    console.error(
-                        "Erro na tela cheia:",
-                        error
-                    );
-
-                }
+                await document.exitFullscreen();
+                return;
 
             }
-        );
 
+            // Primeiro tenta colocar o iframe do jogo em tela cheia
+            if (frame.requestFullscreen) {
+
+                await frame.requestFullscreen();
+
+            } else if (overlay.requestFullscreen) {
+
+                // Alternativa caso o navegador não permita no iframe
+                await overlay.requestFullscreen();
+
+            }
+
+        } catch (error) {
+
+            console.error(
+                "Não foi possível ativar a tela cheia:",
+                error
+            );
+
+            // Última tentativa usando o iframe
+            try {
+
+                if (frame.webkitRequestFullscreen) {
+                    frame.webkitRequestFullscreen();
+                }
+
+            } catch (fallbackError) {
+
+                console.error(
+                    "Fallback de tela cheia também falhou:",
+                    fallbackError
+                );
+
+            }
+
+        }
+
+    }
+);
 
         /* FAVORITOS */
 
