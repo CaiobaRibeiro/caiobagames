@@ -299,3 +299,715 @@
         .game-card:hover {
             transform:
                 translateY(-4px);
+
+            border-color:
+                rgba(196,92,255,0.7);
+
+            box-shadow:
+                0 0 20px
+                rgba(160,32,240,0.18);
+        }
+
+
+        /* =========================
+           CAPA
+        ========================= */
+
+        .game-cover {
+            width: 100%;
+
+            height: 180px;
+
+            flex-shrink: 0;
+
+            overflow: hidden;
+
+            background:
+                #0b080f;
+        }
+
+        .game-cover img {
+            width: 100%;
+
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+
+            transition:
+                transform 0.3s ease;
+        }
+
+        .game-card:hover
+        .game-cover img {
+            transform:
+                scale(1.04);
+        }
+
+
+        /* =========================
+           INFORMAÇÕES
+        ========================= */
+
+        .game-info {
+            display: flex;
+
+            flex-direction: column;
+
+            flex: 1;
+
+            padding: 14px;
+        }
+
+        .game-name {
+            margin:
+                0 0 7px;
+
+            font-family:
+                "Orbitron",
+                sans-serif;
+
+            font-size: 15px;
+
+            line-height: 1.25;
+
+            color: white;
+        }
+
+        .game-description {
+            margin: 0;
+
+            flex: 1;
+
+            color:
+                var(--muted);
+
+            font-size: 12px;
+
+            line-height: 1.4;
+        }
+
+
+        /* =========================
+           BOTÃO JOGAR
+        ========================= */
+
+        .play-button {
+            margin-top: 12px;
+
+            padding: 9px;
+
+            text-align: center;
+
+            border-radius: 6px;
+
+            background:
+                rgba(160,32,240,0.15);
+
+            border:
+                1px solid
+                rgba(160,32,240,0.4);
+
+            color:
+                var(--primary-light);
+
+            font-family:
+                "Orbitron",
+                sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 700;
+        }
+
+        .game-card:hover
+        .play-button {
+            background:
+                var(--primary);
+
+            color: white;
+        }
+
+
+        /* =========================
+           CRÉDITOS
+        ========================= */
+
+        .credits {
+            margin-top: 55px;
+
+            padding-top: 28px;
+
+            border-top:
+                1px solid
+                rgba(160,32,240,0.2);
+        }
+
+        .credits-title {
+            font-family:
+                "Orbitron",
+                sans-serif;
+
+            font-size: 20px;
+        }
+
+        .credits-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(180px,1fr)
+                );
+
+            gap: 12px;
+        }
+
+        .credit {
+            padding: 14px;
+
+            background:
+                rgba(16,11,28,0.7);
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: 8px;
+        }
+
+        .credit-game {
+            margin:
+                0 0 5px;
+
+            font-weight: 600;
+        }
+
+        .credit-author {
+            margin: 0;
+
+            color:
+                var(--muted);
+
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           PLAYER DO JOGO
+        ========================= */
+
+        #gameOverlay {
+            display: none;
+
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 999999;
+
+            background: #000;
+        }
+
+        #gameOverlay.active {
+            display: flex;
+
+            flex-direction: column;
+        }
+
+        #gameTopbar {
+            min-height: 58px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content:
+                space-between;
+
+            gap: 12px;
+
+            padding:
+                8px 14px;
+
+            background:
+                rgba(5,5,8,0.98);
+
+            border-bottom:
+                1px solid
+                rgba(160,32,240,0.5);
+
+            color: white;
+
+            flex-shrink: 0;
+        }
+
+        #gameTitle {
+            font-family:
+                "Orbitron",
+                sans-serif;
+
+            font-size: 15px;
+
+            font-weight: 700;
+
+            color:
+                var(--primary-light);
+
+            white-space: nowrap;
+
+            overflow: hidden;
+
+            text-overflow: ellipsis;
+        }
+
+        #gameButtons {
+            display: flex;
+
+            gap: 8px;
+
+            flex-shrink: 0;
+        }
+
+        #gameButtons button {
+            border:
+                1px solid
+                rgba(160,32,240,0.6);
+
+            border-radius: 6px;
+
+            padding:
+                8px 12px;
+
+            background:
+                #17101e;
+
+            color:
+                var(--primary-light);
+
+            cursor: pointer;
+
+            font-family:
+                "Orbitron",
+                sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            transition:
+                0.2s ease;
+        }
+
+        #gameButtons button:hover {
+            background:
+                var(--primary);
+
+            color: white;
+
+            border-color:
+                var(--primary-light);
+        }
+
+        #gameContainer {
+            position: relative;
+
+            flex: 1;
+
+            min-height: 0;
+
+            background: #000;
+        }
+
+        #gameFrame {
+            width: 100%;
+
+            height: 100%;
+
+            display: block;
+
+            border: 0;
+
+            background: #000;
+        }
+
+
+
+        /* =========================
+           COMENTÁRIOS
+        ========================= */
+
+        .comments-section {
+            margin-top: 55px;
+            padding-top: 28px;
+            border-top: 1px solid rgba(160,32,240,0.2);
+        }
+
+        .comments-title {
+            margin: 0 0 18px;
+            font-family: "Orbitron", sans-serif;
+            font-size: 20px;
+        }
+
+        .comments-form {
+            display: grid;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .comments-form input,
+        .comments-form textarea {
+            width: 100%;
+            padding: 11px 12px;
+            border: 1px solid var(--border);
+            border-radius: 7px;
+            outline: none;
+            background: rgba(16,11,28,0.9);
+            color: white;
+            font-family: "Inter", sans-serif;
+        }
+
+        .comments-form textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .comments-form input:focus,
+        .comments-form textarea:focus {
+            border-color: var(--primary-light);
+            box-shadow: 0 0 12px rgba(160,32,240,0.12);
+        }
+
+        .comments-form button {
+            width: fit-content;
+            padding: 10px 16px;
+            border: 1px solid rgba(160,32,240,0.6);
+            border-radius: 7px;
+            background: rgba(160,32,240,0.15);
+            color: var(--primary-light);
+            cursor: pointer;
+            font-family: "Orbitron", sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .comments-form button:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .comments-status {
+            min-height: 18px;
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .comments-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .comment {
+            padding: 14px;
+            background: rgba(16,11,28,0.7);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+
+        .comment-name {
+            margin: 0 0 6px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .comment-text {
+            margin: 0;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+        }
+
+        /* =========================
+           RESPONSIVO
+        ========================= */
+
+        @media (max-width: 1100px) {
+
+            .games-grid {
+                grid-template-columns:
+                    repeat(
+                        4,
+                        minmax(0,1fr)
+                    );
+            }
+
+        }
+
+        @media (max-width: 700px) {
+
+            .games-grid {
+                grid-template-columns:
+                    repeat(
+                        2,
+                        minmax(0,1fr)
+                    );
+
+                gap: 14px;
+            }
+
+            .game-cover {
+                height: 160px;
+            }
+
+            main {
+                width:
+                    calc(100% - 20px);
+            }
+
+        }
+
+        @media (max-width: 500px) {
+
+            header {
+                padding: 0 16px;
+            }
+
+            main {
+                padding-top: 88px;
+            }
+
+            .game-cover {
+                height: 145px;
+            }
+
+            .game-name {
+                font-size: 13px;
+            }
+
+            .game-description {
+                font-size: 11px;
+            }
+
+            #gameTopbar {
+                flex-wrap: wrap;
+            }
+
+            #gameButtons {
+                width: 100%;
+
+                justify-content:
+                    flex-end;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+        CAIOBAGAMES
+    </div>
+
+</header>
+
+
+<main>
+
+    <h1 class="page-title">
+        Jogos
+    </h1>
+
+    <a class="comments-tab" href="#commentsSection">
+        Aba de comentarios
+    </a>
+
+
+    <section class="games-grid">
+
+
+        <!-- RAGDOLL ARCHERS -->
+
+        
+            class="game-card"
+            href="https://vietdp.com/games/t122024/ragdoll-archers/"
+        >
+
+            <div class="game-cover">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRurkHgxNxkfNwZgbiPR7ZBc0xEBc44lqyiR9hbEn-jQQoIH9lGbBF76GcM&s=10"
+                    alt="Ragdoll Archers"
+                >
+
+            </div>
+
+            <div class="game-info">
+
+                <h2 class="game-name">
+                    Ragdoll Archers
+                </h2>
+
+                <p class="game-description">
+                    Enfrente inimigos usando seu arco e suas habilidades.
+                </p>
+
+                <div class="play-button">
+                    JOGAR
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <!-- RAGDOLL HIT -->
+
+        
+            class="game-card"
+            href="https://ragdollhit2.io/ragdoll-hit.embed"
+        >
+
+            <div class="game-cover">
+
+                <img
+                    src="https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/3c892779be9dabb3589586c83ad3eeed/ragdoll-hit-logo.png"
+                    alt="Ragdoll Hit"
+                >
+
+            </div>
+
+            <div class="game-info">
+
+                <h2 class="game-name">
+                    Ragdoll Hit
+                </h2>
+
+                <p class="game-description">
+                    Use a física dos bonecos para causar o máximo de impacto.
+                </p>
+
+                <div class="play-button">
+                    JOGAR
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <!-- BITLIFE -->
+
+        
+            class="game-card"
+            href="https://elifesimulator.io/bitlife.embed"
+        >
+
+            <div class="game-cover">
+
+                <img
+                    src="https://play-lh.googleusercontent.com/OVgQx7M6lk9VcFZKIY_80siUOESLsu5gtwAKrjIruM097U-at161KrQ6Svxw3uPhY4EfKTGNrlpsd12k4TV6HA"
+                    alt="BitLife"
+                >
+
+            </div>
+
+            <div class="game-info">
+
+                <h2 class="game-name">
+                    BitLife
+                </h2>
+
+                <p class="game-description">
+                    Simule uma vida inteira através das suas escolhas.
+                </p>
+
+                <div class="play-button">
+                    JOGAR
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <!-- LEVEL DEVIL -->
+
+        
+            class="game-card"
+            href="https://leveldevilfull.com/play/level-devil/"
+        >
+
+            <div class="game-cover">
+
+                <img
+                    src="https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/7e18b5cf7da58e6fc90144f747dcc949/level-devil-logo.png"
+                    alt="Level Devil"
+                >
+
+            </div>
+
+            <div class="game-info">
+
+                <h2 class="game-name">
+                    Level Devil
+                </h2>
+
+                <p class="game-description">
+                    Plataforma com armadilhas inesperadas.
+                </p>
+
+                <div class="play-button">
+                    JOGAR
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <!-- BASKETBALL RANDOM -->
+
+        
+            class="game-card"
+            href="https://basketball-random.io/basketball-random.embed"
+        >
+
+            <div class="game-cover">
+
+                <img
+                    src="https://imgs.crazygames.com/basket-random_1x1/20240617090207/basket-random_1x1-cover?format=auto&quality=100&metadata=none&width=1200"
+                    alt="Basketball Random"
+                >
+
+            </div>
+
+            <div class="game-info">
+
+                <h2 class="game-name">
+                    Basketball Random
+                </h2>
+
+                <p class="game-description">
+                    Basquete maluco com física imprevisível.
+                </p>
+
+                <div class="play-button">
+                    JOGAR
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <!-- SNOW RIDER -->
