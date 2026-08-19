@@ -1011,3 +1011,705 @@
 
 
         <!-- SNOW RIDER -->
+
+        
+            class="game-card"
+            href="https://html5.gamedistribution.com/3b79a8537ebc414fb4f9672a9b8c68c8/?gd_sdk_referrer_url=https://gamedistribution.com/games/snow-rider-3d/"
+        >
+
+            <div class="game-cover">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZnTQARWPLkZwQ_ctZEkMvvtR03H7uXfTil20R0LzZIg&s=10"
+                    alt="Snow Rider"
+                >
+
+            </div>
+
+            <div class="game-info">
+
+                <h2 class="game-name">
+                    Snow Rider
+                </h2>
+
+                <p class="game-description">
+                    Deslize pela neve e tente chegar o mais longe possível.
+                </p>
+
+                <div class="play-button">
+                    JOGAR
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <!-- TENNIS MASTER -->
+
+        
+            class="game-card"
+            href="https://html5.gamedistribution.com/ab2f156d72894fd8a5dedb85b34a05e4/?gd_sdk_referrer_url=https://gamedistribution.com/games/tennis-masters-2026/"
+        >
+
+            <div class="game-cover">
+
+                <img
+                    src="https://freetennis.org/images/tennis-game-card.png"
+                    alt="Tennis Master"
+                >
+
+            </div>
+
+            <div class="game-info">
+
+                <h2 class="game-name">
+                    Tennis Master
+                </h2>
+
+                <p class="game-description">
+                    Entre em quadra e mostre suas habilidades no tênis.
+                </p>
+
+                <div class="play-button">
+                    JOGAR
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <!-- GEOGUESSER -->
+
+        
+            class="game-card"
+            href="https://www.worldguessr.com/"
+        >
+
+            <div class="game-cover">
+
+                <img
+                    src="https://sm.ign.com/ign_br/cover/g/geoguessr/geoguessr_ukvg.jpg"
+                    alt="Geoguesser"
+                >
+
+            </div>
+
+            <div class="game-info">
+
+                <h2 class="game-name">
+                    Geoguesser
+                </h2>
+
+                <p class="game-description">
+                    Explore o mundo e tente descobrir onde você está.
+                </p>
+
+                <div class="play-button">
+                    JOGAR
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <!-- TREINO DE FALTA -->
+
+        
+            class="game-card"
+            href="https://play.famobi.com/wrapper/3d-free-kick/A1000-10"
+        >
+
+            <div class="game-cover">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKc-7oTm4F-3-RwE_O2mHXheTJ1mGcoo6adrjITsuVIg&s=10"
+                    alt="Treino de Falta"
+                >
+
+            </div>
+
+            <div class="game-info">
+
+                <h2 class="game-name">
+                    Treino de Falta
+                </h2>
+
+                <p class="game-description">
+                    Treine suas cobranças de falta e tente acertar o alvo.
+                </p>
+
+                <div class="play-button">
+                    JOGAR
+                </div>
+
+            </div>
+
+        </a>
+
+
+    </section>
+
+
+    <!-- CRÉDITOS -->
+
+    <section class="credits">
+
+        <h2 class="credits-title">
+            Créditos
+        </h2>
+
+        <div class="credits-grid">
+
+            <div class="credit">
+
+                <p class="credit-game">
+                    Ragdoll Archers
+                </p>
+
+                <p class="credit-author">
+                    Ericetto
+                </p>
+
+            </div>
+
+
+            <div class="credit">
+
+                <p class="credit-game">
+                    Ragdoll Hit
+                </p>
+
+                <p class="credit-author">
+                    Ericetto
+                </p>
+
+            </div>
+
+
+            <div class="credit">
+
+                <p class="credit-game">
+                    BitLife
+                </p>
+
+                <p class="credit-author">
+                    Candywriter
+                </p>
+
+            </div>
+
+
+            <div class="credit">
+
+                <p class="credit-game">
+                    Level Devil
+                </p>
+
+                <p class="credit-author">
+                    Unept
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         COMENTÁRIOS
+    ========================= -->
+
+    <section class="comments-section" id="commentsSection">
+
+        <h2 class="comments-title">
+            Comentários
+        </h2>
+
+        <form id="commentsForm" class="comments-form">
+
+            <input
+                id="commentName"
+                type="text"
+                maxlength="30"
+                placeholder="Seu nome"
+                required
+            >
+
+            <textarea
+                id="commentText"
+                maxlength="500"
+                placeholder="Escreva um comentário..."
+                required
+            ></textarea>
+
+            <button type="submit">
+                ENVIAR COMENTÁRIO
+            </button>
+
+            <div
+                id="commentsStatus"
+                class="comments-status"
+            ></div>
+
+        </form>
+
+        <div
+            id="commentsList"
+            class="comments-list"
+        ></div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================
+     PLAYER
+========================= -->
+
+<div id="gameOverlay">
+
+    <div id="gameTopbar">
+
+        <div id="gameTitle">
+            Jogo
+        </div>
+
+        <div id="gameButtons">
+
+            <button
+                type="button"
+                id="favoriteButton"
+            >
+                ☆ Favoritar
+            </button>
+
+            <button
+                type="button"
+                id="fullscreenButton"
+            >
+                ⛶ Tela cheia
+            </button>
+
+            <button
+                type="button"
+                id="closeGameButton"
+            >
+                ✕ Fechar
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div id="gameContainer">
+
+        <iframe
+            id="gameFrame"
+            title="Jogo"
+            allow="fullscreen; autoplay; gamepad; pointer-lock"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+</div>
+
+
+<!-- Firebase -->
+<script type="module">
+try {
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+import {
+    getAuth,
+    signInAnonymously
+} from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
+import {
+    getFirestore,
+    collection,
+    addDoc,
+    query,
+    orderBy,
+    onSnapshot,
+    serverTimestamp
+} from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyDptzzLZYWBlTQ1eoIJIQClFc2PKiDNRh0",
+    authDomain: "caioba-games-comentarios.firebaseapp.com",
+    projectId: "caioba-games-comentarios",
+    storageBucket: "caioba-games-comentarios.firebasestorage.app",
+    messagingSenderId: "340825138509",
+    appId: "1:340825138509:web:2a8eb0c467897d64f2c304",
+    measurementId: "G-ST621MWSDD"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+const commentsForm = document.getElementById("commentsForm");
+const commentName = document.getElementById("commentName");
+const commentText = document.getElementById("commentText");
+const commentsList = document.getElementById("commentsList");
+const commentsStatus = document.getElementById("commentsStatus");
+
+function renderComments(snapshot) {
+    commentsList.innerHTML = "";
+
+    snapshot.forEach(function (docSnapshot) {
+        const data = docSnapshot.data();
+
+        const article = document.createElement("article");
+        article.className = "comment";
+
+        const name = document.createElement("h3");
+        name.className = "comment-name";
+        name.textContent = data.name || "Anônimo";
+
+        const text = document.createElement("p");
+        text.className = "comment-text";
+        text.textContent = data.comment || "";
+
+        article.appendChild(name);
+        article.appendChild(text);
+        commentsList.appendChild(article);
+    });
+}
+
+async function startComments() {
+    try {
+        await signInAnonymously(auth);
+
+        const commentsQuery = query(
+            collection(db, "comments"),
+            orderBy("createdAt", "desc")
+        );
+
+        onSnapshot(
+            commentsQuery,
+            function (snapshot) {
+                renderComments(snapshot);
+            },
+            function (error) {
+                console.error("Erro ao carregar comentários:", error);
+                commentsStatus.textContent =
+                    "Não foi possível carregar os comentários.";
+            }
+        );
+
+        commentsForm.addEventListener(
+            "submit",
+            async function (event) {
+                event.preventDefault();
+
+                const name = commentName.value.trim();
+                const comment = commentText.value.trim();
+
+                if (!name || !comment) {
+                    return;
+                }
+
+                commentsStatus.textContent = "Enviando...";
+
+                try {
+                    await addDoc(
+                        collection(db, "comments"),
+                        {
+                            name: name,
+                            comment: comment,
+                            createdAt: serverTimestamp()
+                        }
+                    );
+
+                    commentsForm.reset();
+                    commentsStatus.textContent =
+                        "Comentário enviado!";
+                } catch (error) {
+                    console.error("Erro ao enviar comentário:", error);
+                    commentsStatus.textContent =
+                        "Não foi possível enviar o comentário.";
+                }
+            }
+        );
+
+    } catch (error) {
+        console.error("Erro ao iniciar comentários:", error);
+        commentsStatus.textContent =
+            "Não foi possível conectar aos comentários.";
+    }
+}
+
+startComments();
+
+} catch (fatalError) {
+    console.error("Erro fatal no módulo de comentários (não afeta o resto do site):", fatalError);
+}
+</script>
+
+<!-- Player -->
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+      try {
+
+        const overlay =
+            document.getElementById(
+                "gameOverlay"
+            );
+
+        const frame =
+            document.getElementById(
+                "gameFrame"
+            );
+
+        const title =
+            document.getElementById(
+                "gameTitle"
+            );
+
+        const closeButton =
+            document.getElementById(
+                "closeGameButton"
+            );
+
+        const fullscreenButton =
+            document.getElementById(
+                "fullscreenButton"
+            );
+
+        const favoriteButton =
+            document.getElementById(
+                "favoriteButton"
+            );
+
+        let currentGame = null;
+
+
+        /* =========================
+           ABRIR JOGO
+        ========================= */
+
+        document
+            .querySelectorAll(".game-card")
+            .forEach(function (card) {
+
+                card.removeAttribute("target");
+
+                card.addEventListener(
+                    "click",
+                    function (event) {
+
+                        event.preventDefault();
+
+                        event.stopPropagation();
+
+                        const url =
+                            card.getAttribute(
+                                "href"
+                            );
+
+                        if (!url) {
+                            return;
+                        }
+
+                        const nameElement =
+                            card.querySelector(
+                                ".game-name"
+                            );
+
+                        const name =
+                            nameElement
+                                ? nameElement
+                                    .textContent
+                                    .trim()
+                                : "Jogo";
+
+                        currentGame = {
+                            url: url,
+                            name: name
+                        };
+
+                        title.textContent =
+                            name;
+
+                        frame.src = url;
+
+                        overlay.classList.add(
+                            "active"
+                        );
+
+                        document.body.style.overflow =
+                            "hidden";
+
+                        updateFavorite();
+
+                    }
+                );
+
+            });
+
+
+        /* =========================
+           FECHAR
+        ========================= */
+
+        closeButton.addEventListener(
+            "click",
+            function () {
+
+                overlay.classList.remove(
+                    "active"
+                );
+
+                frame.src =
+                    "about:blank";
+
+                document.body.style.overflow =
+                    "";
+
+            }
+        );
+
+
+        /* =========================
+           TELA CHEIA
+        ========================= */
+
+        fullscreenButton.addEventListener(
+            "click",
+            async function () {
+
+                try {
+
+                    if (
+                        !document.fullscreenElement
+                    ) {
+
+                        await overlay.requestFullscreen();
+
+                    } else {
+
+                        await document.exitFullscreen();
+
+                    }
+
+                } catch (error) {
+
+                    console.error(
+                        "Erro na tela cheia:",
+                        error
+                    );
+
+                }
+
+            }
+        );
+
+
+        /* =========================
+           FAVORITOS
+        ========================= */
+
+        function updateFavorite() {
+
+            if (!currentGame) {
+                return;
+            }
+
+            const key =
+                "caiobagames-favorite-" +
+                currentGame.url;
+
+            const saved =
+                localStorage.getItem(key) ===
+                "true";
+
+            favoriteButton.textContent =
+                saved
+                    ? "★ Favoritado"
+                    : "☆ Favoritar";
+
+        }
+
+
+        favoriteButton.addEventListener(
+            "click",
+            function () {
+
+                if (!currentGame) {
+                    return;
+                }
+
+                const key =
+                    "caiobagames-favorite-" +
+                    currentGame.url;
+
+                const saved =
+                    localStorage.getItem(key) ===
+                    "true";
+
+                localStorage.setItem(
+                    key,
+                    String(!saved)
+                );
+
+                updateFavorite();
+
+            }
+        );
+
+
+        /* =========================
+           ESC
+        ========================= */
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    event.key === "Escape" &&
+                    overlay.classList.contains(
+                        "active"
+                    )
+                ) {
+
+                    if (
+                        document.fullscreenElement
+                    ) {
+
+                        document.exitFullscreen();
+
+                    } else {
+
+                        closeButton.click();
+
+                    }
+
+                }
+
+            }
+        );
+
+      } catch (playerError) {
+        console.error("Erro no player (não afeta o resto do site):", playerError);
+      }
+
+    }
+);
+
+</script>
+
+
+</body>
+</html>
