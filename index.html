@@ -264,6 +264,8 @@
         ========================= */
 
         .game-card {
+            cursor: pointer;
+
             display: flex;
 
             flex-direction: column;
@@ -837,9 +839,9 @@
 
         <!-- RAGDOLL ARCHERS -->
 
-        
+        <div
             class="game-card"
-            href="https://vietdp.com/games/t122024/ragdoll-archers/"
+            data-url="https://vietdp.com/games/t122024/ragdoll-archers/"
         >
 
             <div class="game-cover">
@@ -867,14 +869,14 @@
 
             </div>
 
-        </a>
+        </div>
 
 
         <!-- RAGDOLL HIT -->
 
-        
+        <div
             class="game-card"
-            href="https://ragdollhit2.io/ragdoll-hit.embed"
+            data-url="https://ragdollhit2.io/ragdoll-hit.embed"
         >
 
             <div class="game-cover">
@@ -902,14 +904,14 @@
 
             </div>
 
-        </a>
+        </div>
 
 
         <!-- BITLIFE -->
 
-        
+        <div
             class="game-card"
-            href="https://elifesimulator.io/bitlife.embed"
+            data-url="https://elifesimulator.io/bitlife.embed"
         >
 
             <div class="game-cover">
@@ -937,14 +939,14 @@
 
             </div>
 
-        </a>
+        </div>
 
 
         <!-- LEVEL DEVIL -->
 
-        
+        <div
             class="game-card"
-            href="https://leveldevilfull.com/play/level-devil/"
+            data-url="https://leveldevilfull.com/play/level-devil/"
         >
 
             <div class="game-cover">
@@ -972,14 +974,14 @@
 
             </div>
 
-        </a>
+        </div>
 
 
         <!-- BASKETBALL RANDOM -->
 
-        
+        <div
             class="game-card"
-            href="https://basketball-random.io/basketball-random.embed"
+            data-url="https://basketball-random.io/basketball-random.embed"
         >
 
             <div class="game-cover">
@@ -1007,14 +1009,14 @@
 
             </div>
 
-        </a>
+        </div>
 
 
         <!-- SNOW RIDER -->
 
-        
+        <div
             class="game-card"
-            href="https://html5.gamedistribution.com/3b79a8537ebc414fb4f9672a9b8c68c8/?gd_sdk_referrer_url=https://gamedistribution.com/games/snow-rider-3d/"
+            data-url="https://html5.gamedistribution.com/3b79a8537ebc414fb4f9672a9b8c68c8/?gd_sdk_referrer_url=https://gamedistribution.com/games/snow-rider-3d/"
         >
 
             <div class="game-cover">
@@ -1042,14 +1044,14 @@
 
             </div>
 
-        </a>
+        </div>
 
 
         <!-- TENNIS MASTER -->
 
-        
+        <div
             class="game-card"
-            href="https://html5.gamedistribution.com/ab2f156d72894fd8a5dedb85b34a05e4/?gd_sdk_referrer_url=https://gamedistribution.com/games/tennis-masters-2026/"
+            data-url="https://html5.gamedistribution.com/ab2f156d72894fd8a5dedb85b34a05e4/?gd_sdk_referrer_url=https://gamedistribution.com/games/tennis-masters-2026/"
         >
 
             <div class="game-cover">
@@ -1077,14 +1079,14 @@
 
             </div>
 
-        </a>
+        </div>
 
 
         <!-- GEOGUESSER -->
 
-        
+        <div
             class="game-card"
-            href="https://www.worldguessr.com/"
+            data-url="https://www.worldguessr.com/"
         >
 
             <div class="game-cover">
@@ -1112,14 +1114,14 @@
 
             </div>
 
-        </a>
+        </div>
 
 
         <!-- TREINO DE FALTA -->
 
-        
+        <div
             class="game-card"
-            href="https://play.famobi.com/wrapper/3d-free-kick/A1000-10"
+            data-url="https://play.famobi.com/wrapper/3d-free-kick/A1000-10"
         >
 
             <div class="game-cover">
@@ -1147,7 +1149,7 @@
 
             </div>
 
-        </a>
+        </div>
 
 
     </section>
@@ -1323,8 +1325,6 @@
 
 <!-- Firebase -->
 <script type="module">
-try {
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
 import {
     getAuth,
@@ -1447,10 +1447,6 @@ async function startComments() {
 }
 
 startComments();
-
-} catch (fatalError) {
-    console.error("Erro fatal no módulo de comentários (não afeta o resto do site):", fatalError);
-}
 </script>
 
 <!-- Player -->
@@ -1459,8 +1455,6 @@ startComments();
 document.addEventListener(
     "DOMContentLoaded",
     function () {
-
-      try {
 
         const overlay =
             document.getElementById(
@@ -1503,8 +1497,6 @@ document.addEventListener(
             .querySelectorAll(".game-card")
             .forEach(function (card) {
 
-                card.removeAttribute("target");
-
                 card.addEventListener(
                     "click",
                     function (event) {
@@ -1515,7 +1507,7 @@ document.addEventListener(
 
                         const url =
                             card.getAttribute(
-                                "href"
+                                "data-url"
                             );
 
                         if (!url) {
@@ -1700,10 +1692,6 @@ document.addEventListener(
 
             }
         );
-
-      } catch (playerError) {
-        console.error("Erro no player (não afeta o resto do site):", playerError);
-      }
 
     }
 );
