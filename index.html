@@ -257,56 +257,58 @@ allowfullscreen>
 
 <script>
 
-const games=[
+const games = [
+  // Jogos existentes
+  ['Rooftop Snipers 2','https://ducky443747.github.io/rooftopsnipers2/','https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/895b299e7e49558ca383b23648314860/rooftop-snipers-2-logo.png','Tente vencer o seu oponete com precisão.'],
+  ['Rooftop Snipers','https://unblokedgames.github.io/projects/rooftop-snipers/index.html','https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/c127771edb0e821e4109b7058ae3f094/rooftop-snipers-logo.jpeg','Tente vencer o seu oponete com precisão.'],
+  ['Escape Road','https://azgames.io/escape-road.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4y1J2irNq60gr5ct0PXqHTwalaL5LtOOKbfJZ_h9LpA&s','Fuja pela cidade, desvie dos obstáculos e tente chegar o mais longe possível.'],
+  ['Wacky Flip','https://azgames.io/wacky-flip.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6UK2b3FgT3MbfXqSy1f8FGJB-d4CoBAsrk2BGT20wRw&s','Faça acrobacias e tente acertar os movimentos no momento certo.'],
+  ['Bike Xtreme','https://azgames.io/bike-xtreme.embed','https://play-lh.googleusercontent.com/ZNlK83c8zKcUHOzgwcjDLYi8QIIbsEkdUmSMODovNPIxi_PiUKpgvFunmSPrc_8hyGPtahlIXbG7lREdJqlJ','Supere pistas radicais usando sua moto e mantenha o equilíbrio.'],
+  ['Undead Corridor','https://azgames.io/undead-corridor.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqg5Un2gXFBAMXE2S8IcC0phmkxDSq8eiTroTTkfCzZmQMhurOVh09kvzD&s=10','Atravesse corredores cheios de desafios e tente sobreviver às fases.'],
+  ['Orbit Kick','https://azgames.io/orbit-kick.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaTwUODsENC_R5VSXAIOteHI-K0DIW87BxeoLe6AoqvcdvP8Mt_DfG_6DK&s=10','Chute a bola e tente marcar gols usando ângulos e força.'],
+  ['Cowboy Safari','https://azgames.io/cowboy-safari.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbXbkd7VXN5a2dF-Aj4cvLIYNnZ-vgUANhywWMa43Lafdjg5ppazjuNzy4&s=10','Explore uma aventura no estilo faroeste e supere os desafios do caminho.'],
+  ['Flip Spot','https://azgames.io/flip-spot.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAJQxW7mERPlBtnL98zpqLamvjrk6ZmuPRtbNoSFbIaQ&s=10','Realize flips e tente completar os movimentos sem perder o controle.'],
+  ['Moto X3M','https://azgames.io/moto-x3m.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3ySfO2VfEstWERnPVtWxw7LDn-qICA3aU9WIOHw0SirAjTbpdiLmJlJJl&s=10','Passe por pistas cheias de obstáculos, saltos e desafios radicais.'],
+  ['Drift Rush','https://azgames.io/drift-rush.embed','https://wackysteps.io/data/image/Drift-Rush.png','Faça curvas em alta velocidade e domine os drifts na pista.'],
+  ['Basketball Stars','https://azgames.io/basketball-stars.embed','https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/9c5a5477b6fcc030def9eaeb017ac0e0/basketball-superstars-logo.png','Entre em quadra e tente marcar mais pontos que seus adversários.'],
+  ['Dude Theft Auto','https://azgames.io/dude-theft-auto.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzeLp6WCXNjSrdJeLzACRdpgodLs-MzPUda66H4jiiXg&s=10','Explore um mundo aberto em uma aventura cheia de situações malucas.'],
+  ['Paper.io','https://azgames.io/paper-io.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKHXyjvcTI5HjVyC43RuESaH00YqrIdFn3Xxk_3sdCxg&s','Conquiste território, aumente sua área e evite deixar seu rastro exposto.'],
+  ['Ragdoll Hit Stickman','https://azgames.io/ragdoll-hit-stickman.embed','https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/3c892779be9dabb3589586c83ad3eeed/ragdoll-hit-logo.png','Use a física dos bonecos para superar os desafios das fases.'],
+  ['1v1.LOL','https://azgames.io/1v1lol.embed','https://topgames.gg/data/image/game/1v1-lol.png','Desafie outros jogadores em partidas rápidas e competitivas.'],
+  ['Narrow One','https://azgames.io/narrow-one.embed','https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/e9f87aed2de11520ecac587ffa98627d/narrow-one-logo.png','Partidas rápidas de equipes com estratégia e precisão.'],
+  ['Krunker','https://azgames.io/krunker.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk7zhRekJ3JA5iGq1HS66l1Bx96MpDr9ZcjLrAQ9XzADS_c0zcS3Cifdg&s=10','Partidas online rápidas em mapas variados e competitivos.'],
+  ['Ragdoll Flip','https://azgames.io/ragdoll-flip.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8Tga4CdMJjzVv39-KYXiyw40pPNhUDwZ1uXNz6Aim7w&s=10','Faça o boneco girar e tente aterrissar corretamente.'],
+  ['Rocket Pult','https://rocketfortress.com/rocket-pult.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaDpNGaCB950Wh8gFXrpfgkmnJvEKWo9SvfChzryfAPKw6zZn54cPxeh4h&s=10','Use lançamentos e física para alcançar a maior distância possível.'],
+  ['GunSpin','https://rocketfortress.com/gunspin.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM3X823TmE8RyzMWcCzneMfXw5AGT9-mfzyqTXWntbvQ&s=10','Use a física do jogo para tentar alcançar grandes distâncias.'],
+  ['Zombie Strike','https://rocketfortress.com/zombie-strike.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL0R_77nnbuwM4pPGar4DY31_r2TavY3J-JaFyP1KRhg&s','Enfrente desafios em um cenário de ação com zumbis.'],
+  ['Counter Craft Sniper','https://rocketfortress.com/counter-craft-sniper.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFDvUh5mqMrRlofmGUsCKD3MPW6Yu4UDS91Vc8zILZvg&s','Complete desafios de precisão em mapas inspirados em blocos.'],
+  ['Aliens Hunter','https://rocketfortress.com/aliens-hunter.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXHt4Ycd6tt3-BRRUyTK7wu4rN7daKl9-8SYnV05vJVIaOwb6Ello3jtYB&s=10','Explore fases de ficção científica e enfrente desafios alienígenas.'],
 
-['Rooftop Snipers 2','https://ducky443747.github.io/rooftopsnipers2/','https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/895b299e7e49558ca383b23648314860/rooftop-snipers-2-logo.png','Tente vencer o seu oponete com precisão.'], 
+  // ==================== NOVOS JOGOS ADICIONADOS ====================
+
+  ['Eagle Craft', 'https://db.duckmath.org/html/minecraft/index.html', 'https://cdn.jsdelivr.net/gh/mathlesson/mathlesson.github.io/img/eagle-craft.jpg', 'Jogo sandbox inspirado no Minecraft. Explore, mine e construa em um mundo 3D de blocos. Modos sobrevivência e criativo.'],
   
-['Rooftop Snipers','https://unblokedgames.github.io/projects/rooftop-snipers/index.html','https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/c127771edb0e821e4109b7058ae3f094/rooftop-snipers-logo.jpeg','Tente vencer o seu oponete com precisão.'],  
+  ['Brawl Simulator 3D', 'https://playgama.com/export/game/brawl-simulator-3d?clid=p_660d5cb9-be70-4477-a140-595c21377514', 'https://playgama.com/cdn-cgi/imagedelivery/LN2S-4p3-GgZvEx3IPaKUA/53453023-daf0-4f00-2938-5ac7867e6400/thumb', 'Simulador 3D de Brawl Stars no navegador. Lute em batalhas 3D, abra caixas e desbloqueie brawlers, skins e avatares.'],
   
-['Escape Road','https://azgames.io/escape-road.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4y1J2irNq60gr5ct0PXqHTwalaL5LtOOKbfJZ_h9LpA&s','Fuja pela cidade, desvie dos obstáculos e tente chegar o mais longe possível.'],
-
-['Wacky Flip','https://azgames.io/wacky-flip.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6UK2b3FgT3MbfXqSy1f8FGJB-d4CoBAsrk2BGT20wRw&s','Faça acrobacias e tente acertar os movimentos no momento certo.'],
-
-['Bike Xtreme','https://azgames.io/bike-xtreme.embed','https://play-lh.googleusercontent.com/ZNlK83c8zKcUHOzgwcjDLYi8QIIbsEkdUmSMODovNPIxi_PiUKpgvFunmSPrc_8hyGPtahlIXbG7lREdJqlJ','Supere pistas radicais usando sua moto e mantenha o equilíbrio.'],
-
-['Undead Corridor','https://azgames.io/undead-corridor.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqg5Un2gXFBAMXE2S8IcC0phmkxDSq8eiTroTTkfCzZmQMhurOVh09kvzD&s=10','Atravesse corredores cheios de desafios e tente sobreviver às fases.'],
-
-['Orbit Kick','https://azgames.io/orbit-kick.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaTwUODsENC_R5VSXAIOteHI-K0DIW87BxeoLe6AoqvcdvP8Mt_DfG_6DK&s=10','Chute a bola e tente marcar gols usando ângulos e força.'],
-
-['Cowboy Safari','https://azgames.io/cowboy-safari.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbXbkd7VXN5a2dF-Aj4cvLIYNnZ-vgUANhywWMa43Lafdjg5ppazjuNzy4&s=10','Explore uma aventura no estilo faroeste e supere os desafios do caminho.'],
-
-['Flip Spot','https://azgames.io/flip-spot.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAJQxW7mERPlBtnL98zpqLamvjrk6ZmuPRtbNoSFbIaQ&s=10','Realize flips e tente completar os movimentos sem perder o controle.'],
-
-['Moto X3M','https://azgames.io/moto-x3m.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3ySfO2VfEstWERnPVtWxw7LDn-qICA3aU9WIOHw0SirAjTbpdiLmJlJJl&s=10','Passe por pistas cheias de obstáculos, saltos e desafios radicais.'],
-
-['Drift Rush','https://azgames.io/drift-rush.embed','https://wackysteps.io/data/image/Drift-Rush.png','Faça curvas em alta velocidade e domine os drifts na pista.'],
-
-['Basketball Stars','https://azgames.io/basketball-stars.embed','https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/9c5a5477b6fcc030def9eaeb017ac0e0/basketball-superstars-logo.png','Entre em quadra e tente marcar mais pontos que seus adversários.'],
-
-['Dude Theft Auto','https://azgames.io/dude-theft-auto.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzeLp6WCXNjSrdJeLzACRdpgodLs-MzPUda66H4jiiXg&s=10','Explore um mundo aberto em uma aventura cheia de situações malucas.'],
-
-['Paper.io','https://azgames.io/paper-io.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKHXyjvcTI5HjVyC43RuESaH00YqrIdFn3Xxk_3sdCxg&s','Conquiste território, aumente sua área e evite deixar seu rastro exposto.'],
-
-['Ragdoll Hit Stickman','https://azgames.io/ragdoll-hit-stickman.embed','https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/3c892779be9dabb3589586c83ad3eeed/ragdoll-hit-logo.png','Use a física dos bonecos para superar os desafios das fases.'],
-
-['1v1.LOL','https://azgames.io/1v1lol.embed','https://topgames.gg/data/image/game/1v1-lol.png','Desafie outros jogadores em partidas rápidas e competitivas.'],
-
-['Narrow One','https://azgames.io/narrow-one.embed','https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/e9f87aed2de11520ecac587ffa98627d/narrow-one-logo.png','Partidas rápidas de equipes com estratégia e precisão.'],
-
-['Krunker','https://azgames.io/krunker.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk7zhRekJ3JA5iGq1HS66l1Bx96MpDr9ZcjLrAQ9XzADS_c0zcS3Cifdg&s=10','Partidas online rápidas em mapas variados e competitivos.'],
-
-['Ragdoll Flip','https://azgames.io/ragdoll-flip.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8Tga4CdMJjzVv39-KYXiyw40pPNhUDwZ1uXNz6Aim7w&s=10','Faça o boneco girar e tente aterrissar corretamente.'],
-
-['Rocket Pult','https://rocketfortress.com/rocket-pult.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaDpNGaCB950Wh8gFXrpfgkmnJvEKWo9SvfChzryfAPKw6zZn54cPxeh4h&s=10','Use lançamentos e física para alcançar a maior distância possível.'],
-
-['GunSpin','https://rocketfortress.com/gunspin.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM3X823TmE8RyzMWcCzneMfXw5AGT9-mfzyqTXWntbvQ&s=10','Use a física do jogo para tentar alcançar grandes distâncias.'],
-
-['Zombie Strike','https://rocketfortress.com/zombie-strike.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL0R_77nnbuwM4pPGar4DY31_r2TavY3J-JaFyP1KRhg&s','Enfrente desafios em um cenário de ação com zumbis.'],
-
-['Counter Craft Sniper','https://rocketfortress.com/counter-craft-sniper.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFDvUh5mqMrRlofmGUsCKD3MPW6Yu4UDS91Vc8zILZvg&s','Complete desafios de precisão em mapas inspirados em blocos.'],
-
-['Aliens Hunter','https://rocketfortress.com/aliens-hunter.embed','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXHt4Ycd6tt3-BRRUyTK7wu4rN7daKl9-8SYnV05vJVIaOwb6Ello3jtYB&s=10','Explore fases de ficção científica e enfrente desafios alienígenas.']
-
+  ['Level Devil', 'https://leveldevilfull.com/play/level-devil/', 'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3242750/header.jpg?t=1782835940', 'Plataforma enganador com 200 níveis desafiadores. Navegue por obstáculos e armadilhas escondidas. Modo local para 2 jogadores.'],
+  
+  ['Chess Online', 'https://playgama.com/export/game/chess-online-playing?clid=p_660d5cb9-be70-4477-a140-595c21377514', 'https://playgama.com/cdn-cgi/imagedelivery/LN2S-4p3-GgZvEx3IPaKUA/8e33f23a-163a-4b62-353e-ba64f4fe2b00/thumb', 'Jogo de xadrez clássico no navegador. Jogue contra a IA ou multiplayer em tempo real. Múltiplos níveis de dificuldade.'],
+  
+  ['GTA Vice City', 'https://quenq.com/apps/vice-city-online/', 'https://quenq.com/apps/vc-web/preview.jpg', 'Vice City Online traz a lendária experiência de mundo aberto de 1986 Miami diretamente para o navegador. Controle Tommy Vercetti enquanto constrói seu império criminoso.'],
+  
+  ['Penalty Kicks', 'https://lemonarcade.com/gp/pgcdn/HTML5/PenaltyKicks/', 'https://www.primarygames.com/arcade/sports/penaltykicks/logo200.png', 'O jogo de futebol está empatado e depende de você vencer a grande partida. Você tem 15 tentativas para marcar o maior número de gols possível.'],
+  
+  ['Ragdoll Soccer', 'https://playgama.com/export/game/ragdoll-soccer?clid=p_660d5cb9-be70-4477-a140-595c21377514', 'https://lemonarcade.com/img/pg/ragdoll-soccer.webp', 'Comande um jogador de futebol stick figure em partidas emocionantes. Inclui modo single player, multiplayer local, campeonato e disputas de pênaltis.'],
+  
+  ['Punch Boxing Championship', 'https://y8.com/embed/punch_boxing_championship', 'https://img.y8.com/cloud/v2-y8-thumbs-big-thumbnails-001/97091/big.gif', 'Torne-se o campeão universal de boxe! Derrote todos os pesos pesados em três modos: Luta Rápida, Torneio e Carreira.'],
+  
+  ['Red and Blue Snipers', 'https://playgama.com/export/game/red-and-blue-snipers?clid=p_660d5cb9-be70-4477-a140-595c21377514', 'https://lemonarcade.com/img/pg/red-and-blue-snipers.webp', 'Torne-se um verdadeiro sniper em vários mapas táticos. Inspire-se nos jogos de e-sports e aprimore sua precisão e compostura.'],
+  
+  ['EdgeFire 2', 'https://playgama.com/export/game/edgefire-2-667e-1?clid=p_660d5cb9-be70-4477-a140-595c21377514', 'https://lemonarcade.com/img/pg/edgefire-2.webp', 'FPS de grande escala inspirado em Counter-Strike. Batalhas intensas em um universo tático com gráficos 3D e jogabilidade refinada.'],
+  
+  ['Real COD Strike', 'https://playgama.com/export/game/real-cod-strike?clid=p_660d5cb9-be70-4477-a140-595c21377514', 'https://lemonarcade.com/img/pg/real-cod-strike.webp', 'Shooter de guerra moderna com combate intenso, missões explosivas e ação baseada em esquadrões. Precisão e reflexos são essenciais.'],
+  
+  ['Stalker 2033: The Path of the Survivor', 'https://playgama.com/export/game/stalker-2033-the-path-of-the-survivor?clid=p_660d5cb9-be70-4477-a140-595c21377514', 'https://lemonarcade.com/img/pg/stalker-2033-the-path-of-the-survivor.webp', 'Atirador 3D em um mundo pós-apocalíptico. Enfrente os mortos-vivos, explore locais vastos, descubra segredos sombrios e lute para sobreviver.']
 ];
 
 const grid=document.getElementById('gamesGrid');
@@ -347,4 +349,287 @@ appId:'1:340825138509:web:2a8eb0c467897d64f2c304',
 measurementId:'G-ST621MWSDD'
 };
 
-const app=initializeApp(firebaseConfig),auth=getAuth(ap
+const app=initializeApp(firebaseConfig);
+const auth=getAuth(app);
+const db=getFirestore(app);
+
+let currentUser = null;
+let currentUserFavorites = new Set();
+
+async function loadUserData(uid) {
+  try {
+    const docRef = doc(db, 'users', uid);
+    const docSnap = await getDoc(docRef);
+    if (docSnap.exists()) {
+      const data = docSnap.data();
+      if (data.favorites) {
+        currentUserFavorites = new Set(data.favorites);
+      }
+    }
+  } catch(e) {
+    console.error('Erro ao carregar dados do usuário:', e);
+  }
+}
+
+async function saveUserFavorites(uid) {
+  try {
+    await setDoc(doc(db, 'users', uid), {
+      favorites: Array.from(currentUserFavorites),
+      updatedAt: serverTimestamp()
+    }, { merge: true });
+  } catch(e) {
+    console.error('Erro ao salvar favoritos:', e);
+  }
+}
+
+// Verifica autenticação
+onAuthStateChanged(auth, async (user) => {
+  if (user) {
+    currentUser = user;
+    document.getElementById('accountButton').textContent = user.email.split('@')[0];
+    document.getElementById('accountButton').style.color = '#00ff88';
+    document.getElementById('accountLogged').style.display = 'block';
+    document.getElementById('accountEmailLabel').textContent = user.email;
+    document.querySelector('.account-form').style.display = 'none';
+    document.getElementById('accountTitle').textContent = '✅ Conectado';
+    document.getElementById('accountStatus').textContent = '✅ Logado com sucesso!';
+    document.getElementById('accountStatus').style.color = '#00ff88';
+    await loadUserData(user.uid);
+  } else {
+    currentUser = null;
+    currentUserFavorites = new Set();
+    document.getElementById('accountButton').textContent = 'ENTRAR';
+    document.getElementById('accountButton').style.color = '';
+    document.querySelector('.account-form').style.display = 'grid';
+    document.getElementById('accountLogged').style.display = 'none';
+    document.getElementById('accountTitle').textContent = 'Entrar';
+    document.getElementById('accountStatus').textContent = '';
+  }
+});
+
+// Login
+document.getElementById('accountForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const email = document.getElementById('accountEmail').value;
+  const password = document.getElementById('accountPassword').value;
+  const status = document.getElementById('accountStatus');
+  const isCreating = document.getElementById('accountToggle').textContent === 'VOLTAR';
+  
+  try {
+    if (isCreating) {
+      await createUserWithEmailAndPassword(auth, email, password);
+      status.textContent = '✅ Conta criada com sucesso!';
+      status.style.color = '#00ff88';
+    } else {
+      await signInWithEmailAndPassword(auth, email, password);
+      status.textContent = '✅ Login realizado!';
+      status.style.color = '#00ff88';
+    }
+    setTimeout(() => {
+      document.getElementById('accountModal').classList.remove('active');
+    }, 1500);
+  } catch(error) {
+    status.textContent = '❌ ' + error.message;
+    status.style.color = '#ff4444';
+  }
+});
+
+// Logout
+document.getElementById('logoutButton').addEventListener('click', async function() {
+  try {
+    await signOut(auth);
+    document.getElementById('accountStatus').textContent = '👋 Desconectado!';
+    document.getElementById('accountStatus').style.color = '#ffd700';
+    setTimeout(() => {
+      document.getElementById('accountModal').classList.remove('active');
+    }, 1000);
+  } catch(error) {
+    alert('Erro ao sair: ' + error.message);
+  }
+});
+
+// Alternar entre "ENTRAR" e "CRIAR CONTA"
+document.getElementById('accountToggle').addEventListener('click', function() {
+  const submit = document.getElementById('accountSubmit');
+  const title = document.getElementById('accountTitle');
+  const status = document.getElementById('accountStatus');
+  if (this.textContent === 'CRIAR CONTA') {
+    this.textContent = 'VOLTAR';
+    submit.textContent = 'CRIAR CONTA';
+    title.textContent = 'Criar Conta';
+    status.textContent = 'Preencha os dados para criar sua conta.';
+    status.style.color = '#aaa0b3';
+  } else {
+    this.textContent = 'CRIAR CONTA';
+    submit.textContent = 'ENTRAR';
+    title.textContent = 'Entrar';
+    status.textContent = '';
+  }
+});
+
+// Recuperar senha
+document.getElementById('accountReset').addEventListener('click', function() {
+  const email = document.getElementById('accountEmail').value;
+  const status = document.getElementById('accountStatus');
+  if (!email) {
+    status.textContent = '❌ Digite seu e-mail primeiro!';
+    status.style.color = '#ff4444';
+    return;
+  }
+  sendPasswordResetEmail(auth, email)
+    .then(() => {
+      status.textContent = '📧 Link de recuperação enviado para ' + email;
+      status.style.color = '#ffd700';
+    })
+    .catch((error) => {
+      status.textContent = '❌ ' + error.message;
+      status.style.color = '#ff4444';
+    });
+});
+
+// Fechar modal
+document.getElementById('accountClose').addEventListener('click', function() {
+  document.getElementById('accountModal').classList.remove('active');
+});
+document.getElementById('accountLoggedClose').addEventListener('click', function() {
+  document.getElementById('accountModal').classList.remove('active');
+});
+document.getElementById('accountModal').addEventListener('click', function(e) {
+  if (e.target === this) {
+    this.classList.remove('active');
+  }
+});
+
+// Abrir modal
+document.getElementById('accountButton').addEventListener('click', function() {
+  document.getElementById('accountModal').classList.add('active');
+});
+
+// Favoritar
+document.getElementById('favoriteButton').addEventListener('click', async function() {
+  const gameName = document.getElementById('gameTitle').textContent;
+  if (!currentUser) {
+    alert('Faça login para favoritar jogos!');
+    return;
+  }
+  if (currentUserFavorites.has(gameName)) {
+    currentUserFavorites.delete(gameName);
+    this.textContent = '☆ Favoritar';
+    alert('⭐ "' + gameName + '" removido dos favoritos!');
+  } else {
+    currentUserFavorites.add(gameName);
+    this.textContent = '★ Favoritado';
+    alert('⭐ "' + gameName + '" favoritado!');
+  }
+  await saveUserFavorites(currentUser.uid);
+});
+
+// Abrir jogo
+document.querySelectorAll('.game-card').forEach(card => {
+  card.addEventListener('click', function() {
+    const name = this.dataset.name;
+    const url = this.dataset.url;
+    document.getElementById('gameTitle').textContent = name;
+    document.getElementById('gameFrame').src = url;
+    document.getElementById('gameOverlay').classList.add('active');
+    const favBtn = document.getElementById('favoriteButton');
+    if (currentUser && currentUserFavorites.has(name)) {
+      favBtn.textContent = '★ Favoritado';
+    } else {
+      favBtn.textContent = '☆ Favoritar';
+    }
+  });
+});
+
+// Fechar jogo
+document.getElementById('closeGameButton').addEventListener('click', function() {
+  document.getElementById('gameOverlay').classList.remove('active');
+  document.getElementById('gameFrame').src = '';
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.getElementById('gameOverlay').classList.remove('active');
+    document.getElementById('gameFrame').src = '';
+  }
+});
+
+// Tela cheia
+document.getElementById('fullscreenButton').addEventListener('click', function() {
+  const container = document.getElementById('gameContainer');
+  if (container.requestFullscreen) {
+    container.requestFullscreen();
+  } else if (container.webkitRequestFullscreen) {
+    container.webkitRequestFullscreen();
+  }
+});
+
+// Pesquisa
+document.getElementById('searchInput').addEventListener('input', function() {
+  const term = this.value.toLowerCase();
+  document.querySelectorAll('.game-card').forEach(card => {
+    const name = card.dataset.name.toLowerCase();
+    card.classList.toggle('hidden', !name.includes(term));
+  });
+});
+
+// Aba de comentários
+document.querySelector('.comments-tab').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('commentsSection').scrollIntoView({ behavior: 'smooth' });
+});
+
+// Comentários
+document.getElementById('commentsForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const name = document.getElementById('commentName').value.trim();
+  const text = document.getElementById('commentText').value.trim();
+  const status = document.getElementById('commentsStatus');
+  
+  if (!name || !text) {
+    status.textContent = '❌ Preencha todos os campos!';
+    status.style.color = '#ff4444';
+    return;
+  }
+  
+  try {
+    await addDoc(collection(db, 'comments'), {
+      name: name,
+      comment: text,
+      timestamp: serverTimestamp()
+    });
+    document.getElementById('commentName').value = '';
+    document.getElementById('commentText').value = '';
+    status.textContent = '✅ Comentário enviado!';
+    status.style.color = '#00ff88';
+  } catch(e) {
+    status.textContent = '❌ Erro ao enviar comentário. Tente novamente.';
+    status.style.color = '#ff4444';
+    console.error('Erro ao enviar comentário:', e);
+  }
+});
+
+// Carregar comentários
+onSnapshot(query(collection(db, 'comments'), orderBy('timestamp', 'desc')), (snapshot) => {
+  const list = document.getElementById('commentsList');
+  if (snapshot.empty) {
+    list.innerHTML = '<div class="comment" style="text-align:center;color:var(--muted);">Nenhum comentário ainda. Seja o primeiro!</div>';
+    return;
+  }
+  list.innerHTML = '';
+  snapshot.forEach(doc => {
+    const data = doc.data();
+    const div = document.createElement('div');
+    div.className = 'comment';
+    div.innerHTML = `
+      <p class="comment-name">${data.name || 'Anônimo'}</p>
+      <p class="comment-text">${data.comment || ''}</p>
+    `;
+    list.appendChild(div);
+  });
+}, (error) => {
+  console.error('Erro ao carregar comentários:', error);
+});
+
+</script>
+</body>
+</html>
