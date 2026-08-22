@@ -73,6 +73,7 @@ main{width:min(1152px,calc(100% - 32px));margin:0 auto;padding:96px 0 50px;posit
 .comment-name{margin:0 0 6px;font-weight:700;color:#fff}
 .comment-text{margin:0;color:var(--muted);font-size:13px;line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere}
 
+/* Overlay do Jogo */
 #gameOverlay{display:none;position:fixed;inset:0;z-index:999999;background:#000}
 #gameOverlay.active{display:flex;flex-direction:column}
 #gameTopbar{min-height:58px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 14px;background:rgba(5,5,8,.98);border-bottom:1px solid rgba(160,32,240,.5);color:#fff;flex-shrink:0}
@@ -83,6 +84,17 @@ main{width:min(1152px,calc(100% - 32px));margin:0 auto;padding:96px 0 50px;posit
 #gameContainer{position:relative;flex:1;min-height:0;background:#000}
 #gameFrame{width:100%;height:100%;display:block;border:0;background:#000}
 #gameFrame:fullscreen{width:100vw;height:100vh;background:#000}
+
+/* Overlay do Modo Visitante (Easter Egg) */
+#guestOverlay{display:none;position:fixed;inset:0;z-index:1000001;background:#fff;flex-direction:column}
+#guestOverlay.active{display:flex}
+#guestTopbar{min-height:58px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 14px;background:#f1f1f1;border-bottom:1px solid #ccc;color:#333;flex-shrink:0}
+#guestTitle{font-family:Inter,sans-serif;font-size:15px;font-weight:600;color:#333}
+#guestButtons{display:flex;gap:8px;flex-shrink:0}
+#guestButtons button{border:1px solid #ccc;border-radius:6px;padding:8px 12px;background:#fff;color:#333;cursor:pointer;font-family:Inter,sans-serif;font-size:13px;transition:all .2s}
+#guestButtons button:hover{background:#e0e0e0}
+#guestContainer{flex:1;background:#fff;position:relative}
+#guestFrame{width:100%;height:100%;border:0;background:#fff}
 
 @media(max-width:1100px){
 .games-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
@@ -107,6 +119,8 @@ main{padding-top:88px}
 #gameTopbar{flex-wrap:wrap}
 #gameButtons{width:100%;justify-content:flex-end}
 #searchInput{width:min(160px,45vw)}
+#guestTopbar{flex-wrap:wrap}
+#guestButtons{width:100%;justify-content:flex-end}
 }
 
 .account-button{height:38px;padding:0 13px;border:1px solid rgba(160,32,240,.6);border-radius:8px;background:rgba(160,32,240,.15);color:var(--primary-light);cursor:pointer;font-family:Orbitron,sans-serif;font-size:10px;font-weight:700;white-space:nowrap}
@@ -245,6 +259,7 @@ A conta já está preparada para identificar o usuário pelo UID e salvar progre
 </div>
 </div>
 
+<!-- Overlay do Jogo -->
 <div id="gameOverlay">
 
 <div id="gameTopbar">
@@ -274,6 +289,20 @@ allowfullscreen>
 
 </div>
 
+</div>
+
+<!-- Overlay do Modo Visitante (Easter Egg: 7x F) -->
+<div id="guestOverlay">
+    <div id="guestTopbar">
+        <span id="guestTitle">🌐 Modo Visitante</span>
+        <div id="guestButtons">
+            <button id="guestFullscreenBtn">⛶ Tela cheia</button>
+            <button id="guestCloseBtn">✕ Fechar</button>
+        </div>
+    </div>
+    <div id="guestContainer">
+        <iframe id="guestFrame" src="https://duckduckgo.com" allowfullscreen></iframe>
+    </div>
 </div>
 
 <script>
@@ -386,6 +415,50 @@ document.querySelectorAll('.game-card').forEach(card => {
 // Botão Início - rola suavemente para o topo
 document.getElementById('homeButton').addEventListener('click', function() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// ============================================================
+// EASTER EGG: DIGITAR "F" 7 VEZES ============================
+// ============================================================
+let fKeyCount = 0;
+let fKeyTimer = null;
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'f' || e.key === 'F') {
+        e.preventDefault();
+        fKeyCount++;
+        clearTimeout(fKeyTimer);
+        fKeyTimer = setTimeout(function() {
+            fKeyCount = 0;
+        }, 2000);
+        
+        if (fKeyCount >= 7) {
+            fKeyCount = 0;
+            clearTimeout(fKeyTimer);
+            openGuestMode();
+        }
+    }
+});
+
+function openGuestMode() {
+    document.getElementById('guestOverlay').classList.add('active');
+    document.getElementById('guestFrame').src = 'https://duckduckgo.com';
+}
+
+// Fechar Modo Visitante
+document.getElementById('guestCloseBtn').addEventListener('click', function() {
+    document.getElementById('guestOverlay').classList.remove('active');
+    document.getElementById('guestFrame').src = 'https://duckduckgo.com';
+});
+
+// Tela Cheia Modo Visitante
+document.getElementById('guestFullscreenBtn').addEventListener('click', function() {
+    const container = document.getElementById('guestContainer');
+    if (container.requestFullscreen) {
+        container.requestFullscreen();
+    } else if (container.webkitRequestFullscreen) {
+        container.webkitRequestFullscreen();
+    }
 });
 
 </script>
@@ -595,7 +668,7 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
-// Tela cheia
+// Tela cheia do jogo
 document.getElementById('fullscreenButton').addEventListener('click', function() {
   const container = document.getElementById('gameContainer');
   if (container.requestFullscreen) {
